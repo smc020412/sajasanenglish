@@ -78,6 +78,17 @@ function renderSiteHeader() {
               Naver Store
             </a>
           </div>
+
+          <button
+            class="mobile-menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
         </nav>
       </div>
     </header>
@@ -399,11 +410,37 @@ function initContactIntroAnimation() {
   });
 }
 
+function initMobileNavigation() {
+  const header = document.querySelector(".site-header");
+  const toggle = header?.querySelector(".mobile-menu-toggle");
+  const navLinks = header?.querySelector(".nav-links");
+  if (!header || !toggle || !navLinks) return;
+
+  const setOpen = (isOpen) => {
+    header.classList.toggle("is-mobile-menu-open", isOpen);
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  };
+
+  toggle.addEventListener("click", () => {
+    setOpen(!header.classList.contains("is-mobile-menu-open"));
+  });
+
+  navLinks.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setOpen(false);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) setOpen(false);
+  });
+}
+
 renderSiteHeader();
 renderSiteFooter();
 animateHeroTitle();
 initBuyerMeetingGallery();
 initCertificateLightbox();
 initContactIntroAnimation();
+initMobileNavigation();
 syncHeaderScrollState();
 window.addEventListener("scroll", syncHeaderScrollState, { passive: true });
