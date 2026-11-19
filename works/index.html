@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../css/works.css" />
   <link rel="stylesheet" href="../css/responsive.css" />
   <script src="../js/main.js" defer></script>
+  <script src="../js/works.js" defer></script>
 </head>
 
 <body>
@@ -41,27 +42,18 @@
           aims to consistently coexist with local farms and promote sustainable production and environmental practices
         </p>
 
-        <div class="works-export-list">
-          <article class="works-export-item">
-            <img src="../images/리스트4.png" alt="Chili pepper powder" loading="lazy" />
-          </article>
-          <article class="works-export-item">
-            <img src="../images/리스트3.png" alt="Seaweed Snack" loading="lazy" />
-          </article>
-          <article class="works-export-item">
-            <img src="../images/리스트1.png" alt="Dried goji berries" loading="lazy" />
-          </article>
-          <article class="works-export-item">
-            <img src="../images/리스트2.png" alt="Dried Liriope" loading="lazy" />
-          </article>
-          <article class="works-export-item">
-            <img src="../images/리스트5.png" alt="Hangwa Korean Sweets" loading="lazy" />
-          </article>
-        </div>
+        <nav class="product-categories" aria-label="Product categories">
+          <a href="#chili" data-product-link>Chili pepper powder</a>
+          <a href="#seaweed" data-product-link>Cheongyang Chili Seasoned Seaweed</a>
+          <a href="#goji" data-product-link>Dried goji berries</a>
+          <a href="#liriope" data-product-link>Roasted Liriope roots</a>
+          <a href="#hangwa" data-product-link>Hangwa (Korean Sweets)</a>
+          <a href="#nurungbbung" data-product-link>Goji Nurungbbung</a>
+        </nav>
       </div>
     </section>
 
-    <section class="product-detail-section chili-section">
+    <section id="chili" class="product-detail-section chili-section" data-product-panel aria-label="Chili pepper powder">
       <div class="product-detail-inner">
         <div class="product-detail-copy">
           <h2>Chili pepper powder</h2>
@@ -107,37 +99,35 @@
       </div>
     </section>
 
-    <section class="product-simple-section seaweed-section">
+    <section id="seaweed" class="product-simple-section seaweed-section" data-product-panel aria-label="Cheongyang Chili Seasoned Seaweed">
       <div class="product-simple-inner">
-        <div class="product-section-divider" aria-hidden="true"></div>
-
         <div class="product-simple-copy">
-          <h2>Seaweed snack</h2>
+          <h2>Cheongyang Chili Seasoned Seaweed</h2>
           <p>
-            Cheongyang Chili Pepper Seaweed Snack(Gim) is a seasoned seaweed snack made with
+            Cheongyang Chili Seasoned Seaweed (Gim) is made with
             Cheongyang chili pepper oil,
           </p>
           <p>
             a specialty of Cheongyang-gun, and has a very spicy taste.
           </p>
           <p>
-            Pepper-flavored seaweed snacks are processed and sold in a HACCP facility.
+            This chili-flavored seasoned seaweed is processed and sold in a HACCP facility.
           </p>
           <p>
-            This spicy chili seaweed snack is popular among Koreans in their 20s for its spicy flavor.
+            Enjoy it with rice or on its own as a crispy, savory snack.
           </p>
         </div>
 
         <div class="product-card-gallery">
-          <img src="../images/김1.png" alt="Seaweed snack product 1" loading="lazy" />
-          <img src="../images/김2.png" alt="Seaweed snack product 2" loading="lazy" />
-          <img src="../images/김3.png" alt="Seaweed snack product 3" loading="lazy" />
-          <img src="../images/김4.png" alt="Seaweed snack product 4" loading="lazy" />
+          <img src="../images/김1.png" alt="Cheongyang Chili Seasoned Seaweed product 1" loading="lazy" />
+          <img src="../images/김2.png" alt="Cheongyang Chili Seasoned Seaweed product 2" loading="lazy" />
+          <img src="../images/김3.png" alt="Cheongyang Chili Seasoned Seaweed product 3" loading="lazy" />
+          <img src="../images/김4.png" alt="Cheongyang Chili Seasoned Seaweed product 4" loading="lazy" />
         </div>
       </div>
     </section>
 
-    <section class="product-detail-section product-detail-light goji-section">
+    <section id="goji" class="product-detail-section product-detail-light goji-section" data-product-panel aria-label="Dried goji berries">
       <div class="product-detail-inner">
         <div class="product-detail-copy">
           <h2>Dried goji berries</h2>
@@ -192,10 +182,8 @@
       </div>
     </section>
 
-    <section class="product-detail-section product-detail-light liriope-section">
+    <section id="liriope" class="product-detail-section product-detail-light liriope-section" data-product-panel aria-label="Roasted Liriope roots">
       <div class="product-detail-inner">
-        <div class="product-light-divider" aria-hidden="true"></div>
-
         <div class="product-detail-copy">
           <h2>Roasted Liriope roots</h2>
 
@@ -240,7 +228,7 @@
       </div>
     </section>
 
-    <section class="product-detail-section hangwa-section">
+    <section id="hangwa" class="product-detail-section hangwa-section" data-product-panel aria-label="Hangwa (Korean Sweets)">
       <div class="product-detail-inner">
         <div class="product-detail-copy">
           <h2>Hangwa (Korean Sweets)</h2>
@@ -287,6 +275,20 @@
           <img src="../images/한과4.jpg" alt="Hangwa product 3" loading="lazy" />
           <img src="../images/한과5.jpg" alt="Hangwa product 4" loading="lazy" />
         </div>
+      </div>
+    </section>
+
+    <section id="nurungbbung" class="product-flyer-section" data-product-panel aria-label="Nurungbbung">
+      <div class="product-flyer-images">
+        <img src="../images/누룽뻥1.jpg" alt="Nurungbbung product information 1" width="860" height="1790" loading="lazy" />
+        <img src="../images/누룽뻥2.jpg" alt="Nurungbbung product information 2" width="860" height="2000" loading="lazy" />
+        <img src="../images/누룽뻥3.jpg" alt="Nurungbbung product information 3" width="860" height="2000" loading="lazy" />
+        <img src="../images/누룽뻥4.jpg" alt="Nurungbbung product information 4" width="860" height="2000" loading="lazy" />
+        <img src="../images/누룽뻥5.jpg" alt="Nurungbbung product information 5" width="860" height="2072" loading="lazy" />
+        <img src="../images/누룽뻥6.jpg" alt="Nurungbbung product information 6" width="860" height="2357" loading="lazy" />
+        <img src="../images/누룽뻥7.jpg" alt="Nurungbbung product information 7" width="860" height="2000" loading="lazy" />
+        <img src="../images/누룽뻥8.jpg" alt="Nurungbbung product information 8" width="860" height="1757" loading="lazy" />
+        <img src="../images/누룽뻥9.jpg" alt="Nurungbbung product information 9" width="860" height="2000" loading="lazy" />
       </div>
     </section>
   </main>

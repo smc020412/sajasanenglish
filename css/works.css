@@ -1,5 +1,61 @@
 /* Product Description page */
 
+[data-product-panel][hidden] {
+  display: none;
+}
+
+.product-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 48px;
+}
+
+.product-categories a {
+  padding: 12px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--button-radius);
+  color: var(--color-copy);
+  background: var(--color-white);
+  font-size: 1rem;
+}
+
+.product-categories a:hover,
+.product-categories a[aria-current] {
+  color: var(--color-white);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.product-categories a:focus-visible {
+  outline: 3px solid var(--color-text);
+  outline-offset: 3px;
+}
+
+[data-product-panel] {
+  scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
+.seaweed-section .product-simple-inner {
+  padding-top: 74px;
+}
+
+.product-flyer-section {
+  background: var(--color-bg-soft);
+}
+
+.product-flyer-images {
+  width: min(100%, 860px);
+  margin: 0 auto;
+}
+
+.product-flyer-images img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .works-overview-section {
   padding: 156px 0 104px;
   background:
@@ -63,23 +119,8 @@
   line-height: 1.7;
 }
 
-.works-export-list {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 64px;
-  gap: clamp(12px, 1.6vw, 28px);
-}
 
-.works-export-item {
-  flex: 0 1 190px;
-}
 
-.works-export-item img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
 
 .product-detail-section {
   color: var(--color-white);
@@ -100,12 +141,6 @@
   padding: 74px 0 86px;
 }
 
-.product-light-divider {
-  grid-column: 1 / -1;
-  height: 1px;
-  margin-bottom: -6px;
-  background: rgba(101, 112, 131, 0.24);
-}
 
 .product-detail-copy {
   align-self: start;
@@ -245,11 +280,6 @@
   padding: 0 0 86px;
 }
 
-.product-section-divider {
-  height: 1px;
-  margin-bottom: 66px;
-  background: rgba(255, 255, 255, 0.24);
-}
 
 .product-simple-copy {
   max-width: 860px;
@@ -327,17 +357,7 @@
     font-size: clamp(1.5rem, 7vw, 2.05rem);
   }
 
-  .works-export-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-top: 44px;
-    gap: 28px 18px;
-  }
 
-  .works-export-item {
-    width: min(100%, 170px);
-    justify-self: center;
-  }
 
   .product-detail-inner {
     grid-template-columns: 1fr;
@@ -346,9 +366,6 @@
     padding: 56px 0 64px;
   }
 
-  .product-light-divider {
-    margin-bottom: 0;
-  }
 
   .product-detail-main-image {
     justify-self: stretch;
@@ -384,9 +401,6 @@
     padding-bottom: 64px;
   }
 
-  .product-section-divider {
-    margin-bottom: 44px;
-  }
 
   .product-simple-copy {
     margin-bottom: 42px;
